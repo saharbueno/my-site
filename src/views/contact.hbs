@@ -1,0 +1,34 @@
+<main class="flex flex-col justify-center items-center w-screen">
+    <img class="w-40" src="/assets/mail-logo.png" width="500" height="500">
+    {{#if error}}
+    <div class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent to-white rounded-xl p-2 shadow-lg lg:w-[50%] md:w-[60%] w-[70%] text-center">
+        <p id="error" class="bg-gradient-to-r from-[#7871A4] to-light-pink inline-block text-transparent bg-clip-text"><span>ꃋᴖꃋ </span>{{error}}<span> ໒꒰ྀིっ˕ -｡꒱ྀི১</span></p>
+    </div>
+    {{/if}}
+
+    {{#if submitted}}
+        <div class="p-5 pb-2 font-thin bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent to-white rounded-xl p-2 shadow-lg lg:w-[50%] md:w-[60%] w-[70%] h-[150px] text-center flex flex-col items-center justify-center">
+            <p id="submitted" class="lowercase bg-gradient-to-r to-light-pink from-[#7871A4] inline-block text-transparent bg-clip-text text-3xl">{{submitted}}</p>
+            <p class="m-4"><i class="bi bi-envelope-open-heart text-light-pink text-3xl"></i></p>
+        </div>
+    {{else}}
+        <form class="text-lg p-10 m-5 border-double border-[5px] border-light-pink rounded-xl w-[75%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-baby-pink to-super-light-pink p-5 shadow-lg" method="POST" action="/contact">
+            <label class="text-light-pink font-bold italic text-[1rem]" for="name">full name <span class="font-thin">(required)</span></label><br>
+            <input class="m-1 rounded-xl border-baby-pink w-[95%] text-[0.85rem] pl-1 focus:outline-none" type="text" id="name" name="name"><br>
+            <label class="text-light-pink font-bold italic text-[1rem]" for="email">email <span class="font-thin">(required)</span></label><br>
+            <input class="m-1 rounded-xl border-baby-pink w-[95%] text-[0.85rem] pl-1 focus:outline-none" type="text" id="email" name="email"><br>
+            <label class="text-light-pink font-bold italic text-[1rem]" for="message">message <span class="font-thin">(required)</span></label><br>
+            <input class="m-1 rounded-xl border-baby-pink w-[95%] text-[0.85rem] pl-1 focus:outline-none" type="text" id="message" name="message"><br>
+            <input class="font-bold italic lowercase text-white ml-1 m-5 bg-light-pink rounded-xl hover:opacity-50 hover:bg-gradient-to-r hover:from-[#7871A4] hover:to-light-pink hover:border-none p-4 lg:w-[25%] md:w-[30%] w-[35%]" type="submit">
+        </form>
+    {{/if}}
+
+    <h1 class="m-4 mb-6 font-thin italic">don't forget these!</h1>
+    <div class="flex justify-center items-center">
+        <i class="bi bi-arrow-down"></i>
+    </div>
+    <div class="flex flex-row justify-center items-center w-[30%] bg-gradient-to-r from-baby-pink to-light-pink inline-block text-transparent bg-clip-text text-6xl mt-5 hover:from-[#7871A4] hover:to-light-pink">
+        <a href="https://github.com/saharbueno"><i class="bi bi-github m-2"></i></a>
+        <a href=" https://www.linkedin.com/in/saharbueno/"><i class="bi bi-linkedin m-2"></i></a>
+    </div>
+</main>
