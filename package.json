@@ -5,7 +5,8 @@
   "main": "src/app.mjs",
   "scripts": {
     "build-css": "postcss src/css/styles.css -o src/public/css/styles.css",
-    "watch": "tailwindcss --watch --input src/css/styles.css --output src/public/css/styles.css"
+    "watch": "tailwindcss --watch --input src/css/styles.css --output src/public/css/styles.css",
+    "start": "cd src && node app.mjs"
   },
   "author": "sahar bueno-abdala",
   "license": "ISC",
