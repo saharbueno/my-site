@@ -132,14 +132,16 @@ async function getRepos() {
     repoArr = repos.map(repo => {
         return new Repository(
             repo.id,
-            repo.name.toLowerCase(),
-            repo.description.toLowerCase(),
+            (repo.name ?? 'No name yet...').toLowerCase(),
+            (repo.description ?? 'No description yet...').toLowerCase(),
             // filter out the topics array immediately
-            tops = repo.topics.filter(topic => !isSubTopic(topic, repo.topics)),
+            Array.isArray(repo.topics)
+            ? repo.topics.filter(topic => !isSubTopic(topic, repo.topics))
+            : [],
             repo.html_url,
             // convert updated & created at data to readable dates
             convertDate('created', repo.created_at),
-            convertDate('updated', repo.created_at),
+            convertDate('updated', repo.updated_at),
         );
     });
     // for each object, create the html and append it to dom
