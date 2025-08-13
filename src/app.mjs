@@ -50,7 +50,7 @@ app.get('/api/repos', bp.urlencoded({ extended: true }), async (req, res) => {
         headers: {
             Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
             "Content-Type": "application/json",
-            "Accept": "application/vnd.github.mercy-preview+json"
+            "Accept": "application/vnd.github.mercy-preview+json",
         }
     }).then(async (response) => {
         // if there is no data in the database -> add data
