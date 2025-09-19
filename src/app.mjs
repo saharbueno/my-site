@@ -19,6 +19,7 @@ const __dirname = path.dirname(__filename);
 
 // set the public directory as the location for static files
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'));
 
 // middleware to use req.body
 app.use(express.urlencoded({extended: false}));
@@ -39,6 +40,12 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
     // render contact
     res.render('contact', {});
+});
+
+// get the design page
+app.get('/design', (req, res) => {
+    // render design
+    res.render('design', {});
 });
 
 // get repos using github api
