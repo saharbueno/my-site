@@ -1,0 +1,21 @@
+<main class="flex flex-col justify-center items-center w-screen p-10">
+  <h1 class="text-4xl font-bold bg-gradient-to-r from-[#7871A4] to-baby-pink bg-clip-text text-transparent mb-5">{{name}}</h1>
+  
+  <p class="color-[#7871A4] w-[50%] m-10 text-center text-lg">{{desc}}</p>
+  
+  {{#if images}}
+    <div class="columns-1 md:columns-2 gap-3 space-y-3 mb-10 w-[60%]">
+      {{#each images}}
+        <img src="{{this}}" alt="{{../title}}" class="rounded-lg shadow-sm object-cover w-[100%]">
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if iframes}}
+    <div class="flex flex-col gap-6 w-full max-w-[800px]">
+      {{#each iframes}}
+        {{{this}}}
+      {{/each}}
+    </div>
+  {{/if}}
+</main>

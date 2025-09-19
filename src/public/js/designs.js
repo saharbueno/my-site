@@ -1,7 +1,7 @@
 // hardcoded design data
 const designs = [
   {
-    id: "1",
+    id: "games4peace",
     name: "games4peace mobile app",
     desc: "a mobile app UI/UX design for a charity gaming platform.",
     url: "/design/games4peace",
@@ -10,7 +10,7 @@ const designs = [
     image: "/assets/designs/g4p/logo.png"
   },
   {
-    id: "2",
+    id: "seraphim",
     name: "seraphim web app",
     desc: "a web app design for a student-made social media platform.",
     url: "/design/seraphim",
@@ -19,7 +19,7 @@ const designs = [
     image: "/assets/designs/seraphim/logo.png"
   },
     {
-    id: "3",
+    id: "moodify",
     name: "moodify web app",
     desc: "a web app design for a Spotify API mood tracker.",
     url: "/design/moodify",
@@ -28,7 +28,7 @@ const designs = [
     image: "/assets/designs/moodify/4.png"
   },
     {
-    id: "4",
+    id: "study-buns",
     name: "study buns web app",
     desc: "a web app design for a study tracker game.",
     url: "/design/study-buns",
@@ -37,7 +37,7 @@ const designs = [
     image: "/assets/designs/studybuns/logo.png"
   },
   {
-    id: "5",
+    id: "msi-americas",
     name: "marketing for msi americas",
     desc: "logos, presentations, and mockups for msi americas.",
     url: "/design/msi-americas",
@@ -46,7 +46,7 @@ const designs = [
     image: "/assets/designs/msi/logo.png"
   },
   {
-    id: "6",
+    id: "mobalytics",
     name: "mobalytics remote extern presentation",
     desc: "created a presentation to present key analytics to mobalytics.",
     url: "/design/mobalytics",
