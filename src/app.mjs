@@ -85,9 +85,6 @@ const designs = [
   },
 ];
 
-const router = express.Router();
-app.use('/', router);
-
 // set the view engine
 app.set('view engine', 'hbs');
 
@@ -126,7 +123,7 @@ app.get('/design', (req, res) => {
 });
 
 // get the design detail pages
-router.get("/design/:id", (req, res) => {
+app.get("/design/:id", (req, res) => {
   const design = designs.find(d => d.id === req.params.id);
   if (!design) return res.status(404).send("Design not found");
   
