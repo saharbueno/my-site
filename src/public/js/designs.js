@@ -25,7 +25,7 @@ const designs = [
     url: "/design/moodify",
     createdAt: "from dec 2024",
     doneAt: "to dec 2024",
-    image: "/assets/designs/moodify/4.png"
+    image: "/assets/designs/moodify/logo.png"
   },
     {
     id: "study-buns",
@@ -59,7 +59,7 @@ const designs = [
 // simplified card generator
 function createDesignCard(design, index) {
   const container = document.createElement('a');
-  container.classList.add('flex', 'flex-col', 'content-center', 'justify-center', 'items-start', 'flex-1', 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]','from-transparent', 'to-super-light-pink', 'rounded-lg', 'p-3', 'shadow-lg', 'gap-1', 'md:mb-[0px]', 'mb-[20px]', "hover:shadow-xl", "hover:scale-[1.02]", "transition");
+  container.classList.add('flex', 'flex-col', 'content-center', 'justify-center', 'items-start', 'flex-1', 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]','from-transparent', 'to-super-light-pink', 'rounded-lg', 'p-3', 'shadow-lg', 'gap-1', 'md:mb-[0px]', 'mb-[20px]', "hover:shadow-xl", "hover:scale-[1.02]", "transition", "pb-5");
   container.href = design.url; // make it clickable
 
   const headingContainer = document.createElement('div');
